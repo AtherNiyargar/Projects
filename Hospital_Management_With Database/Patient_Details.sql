@@ -41,10 +41,10 @@ CREATE TABLE `Patient_Details` (
 --
 
 INSERT INTO `Patient_Details` (`id`, `Phone_No`, `Aadhar_No`, `Disease`, `First_Name`, `Last_Name`) VALUES
-(9, '9024779695', '123456897458', 'Heart Attack', 'Ather', 'Niyargar'),
-(10, '8239276718', '546897853214', 'Erectile Dysfunction', 'Arvind', 'Chauhan'),
-(11, '9521751901', '568912347586', 'Blood Cancer', 'Saloni ', 'Tiwari'),
-(12, '7976359188', '123456789123', 'heart attack', 'Qazi Faizan', 'Ullah');
+(9, '1234567899', '123456897458', 'Heart Attack', 'Ather', 'Niyargar'),
+(10, '9876543211', '546897853214', 'Erectile Dysfunction', 'Arvind', 'Chauhan'),
+(11, '4567891234', '568912347586', 'Blood Cancer', 'Saloni ', 'Tiwari'),
+(12, '5825456597', '123456789123', 'heart attack', 'Qazi Faizan', 'Ullah');
 
 --
 -- Indexes for dumped tables
