@@ -252,3 +252,14 @@ public class Hospital {
 
     }
 }
+
+
+
+
+
+/*
+    * I know this code does not follow good coding practices.
+    * And it can be Improved.
+    * There can be some issues where the program may get crashed (even when I used try-catch block).
+    * But I am just lazy to fix this.
+*/
