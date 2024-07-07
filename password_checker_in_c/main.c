@@ -8,16 +8,25 @@ int checker(char *password)
     // but they increase the readability
     // I like to include less header files
 
+    if(strlen(password) < 9)
+        return 0;
+
     int upper_case = 0,
         lower_case = 0,
         special_case = 0,
-        alpha_numeric = 0;
+        alphabet = 0,
+        numeric = 0;
 
     for (int i = 0; i < strlen(password); i++)
     {
-        if (!alpha_numeric)
+
+        if (!alphabet)
             if (isalnum(password[i]))
-                alpha_numeric = 1;
+                alphabet = 1;
+            
+        if(!numeric)
+            if(isdigit(password[i]))
+                numeric = 1;
 
         if (!upper_case)
             if (isupper(password[i]))
@@ -33,7 +42,7 @@ int checker(char *password)
             if (ispunct(password[i]))
                 special_case = 1;
 
-        if (alpha_numeric && special_case && lower_case && upper_case)
+        if (alphabet && numeric && special_case && lower_case && upper_case)
             return 1;
     }
     return 0;
@@ -45,7 +54,6 @@ int main()
 
     while (1)
     {
-
         // These are the color codes for texts in linux
         /*
         Black:  \e[30m
@@ -64,6 +72,7 @@ int main()
 
         int result = 0;
         result = checker(password);
+        
         if (result)
         {
             printf("\e[32mThe password is strong\e[0m\n");
