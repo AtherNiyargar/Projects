@@ -59,18 +59,18 @@ int main()
         Reset:  \e[0m (resets text color to default)
         */
 
-        printf("\e[0mEnter your password : ");
+        printf("Enter your password : ");
         fgets(password, 50, stdin); // Actually, it will take 49 characters
 
         int result = 0;
         result = checker(password);
         if (result)
         {
-            printf("\e[32mThe password is strong\n");
+            printf("\e[32mThe password is strong\e[0m\n");
             break;
         }
         else
-            printf("\e[31mThe password is weak\n");
+            printf("\e[31mThe password is weak\e[0m\n");
     }
     return 0;
 }
